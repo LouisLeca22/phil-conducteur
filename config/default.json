@@ -1,0 +1,5 @@
+{
+  "mongoURI": "mongodb+srv://louis123:louis123@phil-conducteur.0rroo.mongodb.net/Phil-Conducteur?retryWrites=true&w=majority",
+  "jwtSecret": "louisecretoken"
+}
+
