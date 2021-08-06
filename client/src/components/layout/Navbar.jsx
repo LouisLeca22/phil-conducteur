@@ -13,6 +13,11 @@ function Navbar({auth: {isAuthenticated, loading}, logout}) {
         </Link>
       </li>
       <li>
+        <Link to="/posts">
+        Articles
+        </Link>
+      </li>
+      <li>
       <Link to="/dashboard">
         <i className="fas fa-user"></i>{" "}
         <span className="hide-sm">Tableau de bord</span>
