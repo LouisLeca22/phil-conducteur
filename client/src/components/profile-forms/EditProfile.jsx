@@ -33,7 +33,7 @@ const EditProfile = ({profile: {profile, loading},createProfile, getCurrentProfi
       facebook: loading || !profile.social.facebook ? "" : profile.social.facebook,
       twitter: loading || !profile.social.twitter ? "" : profile.social.twitter,
       instagram: loading || !profile.social.instagram ? "" : profile.scial.instagram,
-      youtube: loading || !profile.social.youtube ? "" : profile.scial.youtube,
+      youtube: loading || !profile.social.youtube ? "" : profile.social.youtube,
       linkedin: loading || !profile.social.linkedin ? "" : profile.scial.linkedin,
 
     })
