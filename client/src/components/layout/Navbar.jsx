@@ -43,7 +43,7 @@ function Navbar({auth: {isAuthenticated, loading}, logout}) {
   return (
     <nav className="navbar bg-dark">
     <h1>
-      <Link to="/"><img src="img/philosophy.png" style={{height: "25px", width:"25px"}} alt="" /> Phil-conducteur</Link>
+      <Link to="/"> <i className="fas fa-lightbulb"></i> Phil-conducteur</Link>
     </h1>
     {!loading && <>{isAuthenticated ? authLinks : guestLinks}</>}
   </nav>
