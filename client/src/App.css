@@ -19,7 +19,6 @@ body {
   line-height: 1.6;
   background-color: #fff;
   color: #333;
-  overflow-y: hidden;
 }
 
 a {
@@ -337,6 +336,7 @@ button {
   position: relative;
   background: url('./img/showcase.jpg') no-repeat center center/cover;
   height: 100vh;
+  
 }
 
 .landing-inner {

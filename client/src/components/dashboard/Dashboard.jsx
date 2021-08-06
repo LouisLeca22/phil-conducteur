@@ -2,9 +2,9 @@ import  {useEffect} from 'react';
 import PropTypes from 'prop-types';
 import {connect} from "react-redux";
 import { getCurrentProfile } from '../../actions/profile';
-import Spinner from "../layout/Spinner"
-import {Link} from "react-router-dom"
-
+import Spinner from "../layout/Spinner";
+import {Link} from "react-router-dom";
+import { DashboardActions } from './DashboardActions';
 const Dashboard = ({getCurrentProfile, auth: {user}, profile: {profile, loading}}) => {
 
   useEffect(() => {
@@ -17,7 +17,9 @@ const Dashboard = ({getCurrentProfile, auth: {user}, profile: {profile, loading}
     <i className="fas fa-user"></i> Bienvenue {user && user.name}
   </p>
   {profile !== null ? (
-  <>Has</>
+  <>
+    <DashboardActions />
+  </>
   ) : (
   <>
     <p>Tu n'as pas encore créé de profil. Ajoutez des informations</p>
