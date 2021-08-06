@@ -4,7 +4,9 @@ import {
   GET_POSTS,
   POST_ERROR,
   UPDATE_LIKES,
-  DELETE_POST
+  DELETE_POST,
+  ADD_POST,
+  GET_POST
 } from "./types";
 
 // Get posts
@@ -62,7 +64,7 @@ export const removeLike = id => async dispatch => {
 // Delete post 
 export const deletePost = id => async dispatch => {
   try {
-    const res = await axios.delete(`/api/posts/${id}`);
+    await axios.delete(`/api/posts/${id}`);
 
     dispatch({
       type: DELETE_POST,
@@ -72,6 +74,51 @@ export const deletePost = id => async dispatch => {
     dispatch(setAlert("Article supprimé", "success"))
 
 
+  } catch (err) {
+    dispatch({
+      type: POST_ERROR,
+      payload: {msg: err.response.statusText, status: err.response.status}
+    })
+  }
+}
+
+// Add post 
+export const addPost = formData => async dispatch => {
+
+  const config = {
+    headers: {
+      "Content-Type": "application/json"
+    }
+  }
+
+  try {
+     const res = await axios.post("/api/posts/", formData, config);
+
+    dispatch({
+      type: ADD_POST,
+      payload: res.data
+    })
+
+    dispatch(setAlert("Article créé", "success"))
+
+
+  } catch (err) {
+    dispatch({
+      type: POST_ERROR,
+      payload: {msg: err.response.statusText, status: err.response.status}
+    })
+  }
+}
+
+// Get post
+export const getPost = id => async dispatch => {
+  try {
+    const res = await axios.get(`/api/posts/${id}`);
+
+    dispatch({
+      type: GET_POST,
+      payload: res.data
+    })
   } catch (err) {
     dispatch({
       type: POST_ERROR,

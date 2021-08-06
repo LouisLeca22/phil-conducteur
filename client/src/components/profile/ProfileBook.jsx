@@ -14,7 +14,7 @@ const ProfileBook = ({book: {
 }
 
 ProfileBook.propTypes = {
-  book: PropTypes.array.isRequired,
+  book: PropTypes.object.isRequired,
 }
 
 export default ProfileBook
