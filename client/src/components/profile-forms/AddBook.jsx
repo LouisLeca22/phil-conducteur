@@ -53,4 +53,4 @@ AddBook.propTypes = {
   addBook: PropTypes.func.isRequired,
 }
 
-export default connect(null, {addBook})(AddBook)
+export default connect(null, {addBook})(withRouter(AddBook))

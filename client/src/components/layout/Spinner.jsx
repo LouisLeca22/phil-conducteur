@@ -1,6 +1,6 @@
 import spinner from "./spinner.gif";
 
-export default () => (
+export default function(){(
   <>
     <img 
       src={spinner} 
@@ -8,4 +8,4 @@ export default () => (
       style={{width: "200px", margin: "auto", display: "block"}}
     />
   </>
-);
+)};

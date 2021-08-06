@@ -37,7 +37,7 @@ const EditProfile = ({profile: {profile, loading},createProfile, getCurrentProfi
       linkedin: loading || !profile.social.linkedin ? "" : profile.scial.linkedin,
 
     })
-  },[loading]);
+  },[loading, getCurrentProfile]);
 
   const {
     website,
