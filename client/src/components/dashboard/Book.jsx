@@ -1,14 +1,15 @@
-import {Connect} from "react-redux"
+import {connect} from "react-redux"
 import PropTypes from 'prop-types'
+import {deleteBook} from "../../actions/profile"
 
 
-const Book = ({book}) => {
+const Book = ({book, deleteBook}) => {
 
   const books = book.map(b => (
     <tr key={b._id}>
       <td>{b.title}</td>
       <td>
-        <button className="btn btn-danger">Supprimer</button>
+        <button onClick={() => deleteBook(b._id)} className="btn btn-danger">Supprimer</button>
       </td>
     </tr>
   ))
@@ -33,6 +34,7 @@ const Book = ({book}) => {
 
 Book.propTypes = {
   book: PropTypes.array.isRequired,
+  deleteBook: PropTypes.func.isRequired,
 }
 
-export default Book
+export default connect(null, {deleteBook})(Book)

@@ -1,14 +1,14 @@
-import {Connect} from "react-redux"
+import {connect} from "react-redux"
 import PropTypes from 'prop-types'
+import { deleteEducation } from "../../actions/profile"
 
-
-const Education = ({education}) => {
+const Education = ({education, deleteEducation}) => {
 
   const educations = education.map(e => (
     <tr key={e._id}>
       <td>{e.school}</td>
       <td>
-        <button className="btn btn-danger">Supprimer</button>
+        <button onClick={() => deleteEducation(e._id)} className="btn btn-danger">Supprimer</button>
       </td>
     </tr>
   ))
@@ -33,6 +33,7 @@ const Education = ({education}) => {
 
 Education.propTypes = {
   education: PropTypes.array.isRequired,
+  deleteEducation: PropTypes.func.isRequired,
 }
 
-export default Education
+export default connect(null, {deleteEducation})(Education)
