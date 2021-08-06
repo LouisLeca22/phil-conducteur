@@ -13,6 +13,7 @@ const ProfileTop = ({profile: {
       class="round-img my-1"
       src={avatar}
       alt=""
+      style={{height: "200px", width: "200px"}}
     />
     <h1 class="large">{name}</h1>
     <p>{location}</p>

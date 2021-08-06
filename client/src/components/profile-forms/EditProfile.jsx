@@ -32,9 +32,9 @@ const EditProfile = ({profile: {profile, loading},createProfile, getCurrentProfi
       bio: loading || !profile.bio ? "" : profile.bio,
       facebook: loading || !profile.social.facebook ? "" : profile.social.facebook,
       twitter: loading || !profile.social.twitter ? "" : profile.social.twitter,
-      instagram: loading || !profile.social.instagram ? "" : profile.scial.instagram,
+      instagram: loading || !profile.social.instagram ? "" : profile.social.instagram,
       youtube: loading || !profile.social.youtube ? "" : profile.social.youtube,
-      linkedin: loading || !profile.social.linkedin ? "" : profile.scial.linkedin,
+      linkedin: loading || !profile.social.linkedin ? "" : profile.social.linkedin,
 
     })
   },[loading, getCurrentProfile]);

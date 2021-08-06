@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 const ProfileItem = ({profile: {user: {_id, name, avatar}, location, fields}}) => {
   return (
     <div className="profile bg-light">
-      <img src={avatar} alt="" className="round-img" />
+      <img src={avatar} alt="" className="round-img"  style={{height: "200px", widht:"200px"}}/>
       <div>
         <h2>{name}</h2>
         <p className="my-1">{location && <span>{location}</span>}</p>
