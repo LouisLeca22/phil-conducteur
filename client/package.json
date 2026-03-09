@@ -2,13 +2,6 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
-  "overrides": {
-    "ajv": "6.12.6",
-    "ajv-keywords": "3.5.2",
-    "ajv-formats": "2.1.1",
-    "schema-utils": "2.7.1",
-    "terser-webpack-plugin": "4.2.3"
-  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
